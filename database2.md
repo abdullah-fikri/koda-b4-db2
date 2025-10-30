@@ -30,7 +30,7 @@ erDiagram
         string id_transaksi
     }
 
-    pengguna ||--|| e-money : integrasi
+    pengguna ||--|| e-money : akses
     e-money }o--o{ transaksi : aktifitas
     transaksi ||--o{ riwayat : hasil_aktifitas
     transaksi || --o{ notifikasi : hasil_aktifitas

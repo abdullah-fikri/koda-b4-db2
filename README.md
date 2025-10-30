@@ -1,15 +1,19 @@
-# Database sistem e-money markdown
+# Database sistem e-money ERD
 
-MArkdown untuk simulasi database e-money, yang menggunakan entitas pengguna, e-money, transaksi, riwayat dan notifikasi
+ERD untuk simulasi database e-money, yang menggunakan entitas pengguna, e-money, transaksi, riwayat dan notifikasi
 
 ## 📸 Preview
 
 ```mermaid
 erDiagram
    pengguna {
+        int id
         string nama
-        string id_pengguna
         string no_hp
+    }
+
+    users {
+        int id
         string email
         string password
     }
@@ -35,7 +39,7 @@ erDiagram
         string id_pengguna
         string id_transaksi
     }
-
+    pengguna ||--|| users : kredensial
     pengguna ||--|| e-money : integrasi
     e-money }o--o{ transaksi : aktifitas
     transaksi ||--o{ riwayat : hasil_aktifitas
